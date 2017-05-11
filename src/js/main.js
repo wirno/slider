@@ -1,7 +1,5 @@
 var $section_active="home";
-
 var $counter = 0;
-
 var mouseWheeled = false, timeOut;
 
 $(window).on( 'mousewheel', function( e ){
@@ -10,56 +8,64 @@ $(window).on( 'mousewheel', function( e ){
     if (!mouseWheeled & Math.abs(delta) >= 10){
         mouseWheeled = true;
 
-
         if (delta >= 0){
             GoUp();
-        }
-
-        else {
+        } else {
             GoDown();
         }
-
         clearTimeout(timeOut);
-
         timeOut = setTimeout(function(){
             mouseWheeled = false;
         }, 500);
     }
 });
 
-
-
 $(document).ready(function () {
-
     $(document).keydown(function(event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
-        console.log(keycode);
-        switch (keycode)
-        {
+        switch (keycode) {
             case 37:
                 GoUp();
             break;
             case 39:
                 GoDown();
             break;
-
         }
     });
-/*
-    setInterval(function(){
-        GoDown();
+
+    var interval = setInterval(function(){
+        if($section_active == 'slide2') {
+            GoToHome();
+        } else {
+            GoDown();
+        }
       }, 5000);
-*/
 
     $(".arrow_up").click(function () {
+        clearInterval(interval);
+        interval = setInterval(function(){
+            if($section_active == 'slide2') {
+                GoToHome();
+            } else {
+                GoDown();
+            }
+      }, 5000);
         GoUp();
     });
     $(".arrow_down").click(function () {
+        clearInterval(interval);
+        interval = setInterval(function(){
+            if($section_active == 'slide2') {
+                GoToHome();
+            } else {
+                GoDown();
+            }
+      }, 5000);
         GoDown();
     });
 
 
-}); // END DOCUMENT READY
+});
 
 function GoToHome(){
     window.location.hash = "#";
@@ -72,7 +78,6 @@ function GoToHome(){
     $counter = 1;
     $('.counter').html($counter + '/3');
 }
-
 
 function GoToSlide_1(){
     window.location.hash = "slide1";
