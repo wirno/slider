@@ -1,0 +1,33 @@
+{
+  "name": "Slider",
+  "version": "0.0.1",
+  "description": "Slider - test front-end",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wirno/slider.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "JS",
+    "Custom",
+    "LPBC",
+    "WordPress",
+    "Theme"
+  ],
+  "author": "Paul Sniezak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wirno/slider/issues"
+  },
+  "homepage": "https://github.com/wirno/slider#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.1"
+  }
+}
