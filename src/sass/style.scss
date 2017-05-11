@@ -1,0 +1,130 @@
+html, body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  padding: 0;
+  margin: 0px;
+  overflow: hidden; }
+
+.all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600%;
+  height: 100%;
+  transition: all 1s; }
+
+.slide {
+  width: 16.6666666667%;
+  height: 100%;
+  position: relative;
+  float: left; }
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
+.home .container {
+  float: left; }
+
+.arrow {
+  position: fixed;
+  z-index: 4;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 40px;
+  color:#fff; }
+
+.arrow_left {
+  opacity: 0;
+  right: 15px;
+  top: 55%;
+  transform: translateY(-50%);
+  transition: all 0.5s; }
+  .arrow_left .fleche {
+    fill: #FFF; }
+
+.arrow_right {
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.fleche {
+  fill: #65A6F2;
+  transition: all 0.5s; }
+
+.home {
+  background-image: url('../assets/img/slide-image-1.jpg');
+  z-index: 1; }
+
+.slider {
+  background-repeat: no-repeat;
+  background-position: bottom; }
+
+.slide_1 {
+  background-image: url('../assets/img/slide-image-2.jpg');
+  background-size: contain;
+  color: #FFF;
+  margin-left: -50vw;
+  transition: all 1s; }
+
+.slide_2 {
+  background-image: url('../assets/img/slide-image-3.jpg');
+  background-size: cover;
+  color: #FFF; }
+
+.content {
+  width : 433px;
+  position: absolute;
+  bottom: 0px;
+  left: 70px;
+  background-color:#FFF;
+  color:#3d3d3d; }
+
+@media only screen and (max-width: 1000px) {
+  .slider {
+    display: none !important; }
+
+  .arrow {
+    display: none !important; }
+
+  .all {
+    left: 0 !important; }
+
+
+@media only screen and (max-width: 420px) {
+  .content {
+    bottom: 20px;
+    left: 50%;
+    width: 100% s;
+    transform: translateX(-50%);
+    text-align: center; }
+    .content h1 {
+      float: none;
+      display: inline-block;
+      margin-bottom: 10px; } }
+@media only screen and (max-width: 420px) {
+  .content {
+    bottom: 20px;
+    left: 50%;
+    width: 300px;
+    transform: translateX(-50%);
+    text-align: center; }
+    .content h1 {
+      float: none;
+      display: inline-block;
+      margin-bottom: 10px; } }
+@media only screen and (max-width: 420px) {
+  .content {
+    bottom: 20px;
+    left: 50%;
+    width: 300px;
+    transform: translateX(-50%);
+    text-align: center; }
+    .content h1 {
+      float: none;
+      display: inline-block;
+      margin-bottom: 100px; } }
+  }
